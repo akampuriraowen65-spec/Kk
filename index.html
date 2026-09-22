@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>OwiTok</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header class="topbar">
+      <strong class="brand">OwiTok</strong>
+      <div class="top-actions">
+        <button id="searchBtn" aria-label="Search">⌕</button>
+        <button id="settingsBtn" aria-label="Settings">☰</button>
+      </div>
+    </header>
+
+    <section id="feed" class="feed" aria-label="Video feed"></section>
+
+    <section id="emptyState" class="empty hidden">
+      <h2>No videos yet</h2>
+      <p>Tap + to choose a video from your phone.</p>
+      <button id="emptyUpload" class="primary">Add video</button>
+    </section>
+
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-tab="home">⌂<span>Home</span></button>
+      <button class="nav-item" data-tab="following">♟<span>Following</span></button>
+      <button id="uploadBtn" class="create">＋</button>
+      <button class="nav-item" data-tab="inbox">♡<span>Inbox</span></button>
+      <button class="nav-item" data-tab="profile">◉<span>Profile</span></button>
+    </nav>
+    <input id="videoPicker" type="file" accept="video/*" multiple hidden>
+  </main>
+
+  <div id="modalRoot"></div>
+  <script src="script.js"></script>
+</body>
+</html>
